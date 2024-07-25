@@ -9,7 +9,7 @@ export default defineConfig({
     lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: '/logo.png',
+        logo: 'logo.png',
         nav: [
             {text: '主页', link: '/', activeMatch: '^/$'},
             {text: '代码规范', link: '/styleguide/', activeMatch: '^/styleguide/'},
