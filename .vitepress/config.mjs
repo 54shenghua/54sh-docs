@@ -55,9 +55,15 @@ export default defineConfig({
             '/practice-checkin/': [],
             '/shenghua-web/': [
                 {
-                    text:'升华网',
+                    text:'升华网改版项目',
                     items: [
                         {text: '项目概述', link: '/shenghua-web/'},
+                    ],
+                },
+                {
+                    text:'内容维护',
+                    items: [
+                        {text: '维护指南', link: '/shenghua-web/content-guide'},
                     ],
                 },
                 {
