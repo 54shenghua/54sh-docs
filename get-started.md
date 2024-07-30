@@ -22,7 +22,7 @@ npm install
 然后启动项目：
 
 ```shell
-npm run dev
+npm run docs:dev
 ```
 
 ## VitePress的Markdown扩展
