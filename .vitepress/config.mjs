@@ -49,7 +49,28 @@ export default defineConfig({
             '/vue3-quickstart/': [],
             '/club-register/': [],
             '/practice-checkin/': [],
-            '/shenghua-web/': [],
+            '/shenghua-web/': [
+                {
+                    text:'升华网',
+                    items: [
+                        {text: '项目概述', link: '/shenghua-web/'},
+                    ],
+                },
+                {
+                    text:'前端',
+                    items: [
+                        {text: '前端概述', link: '/shenghua-web/frontend/introduce/'},
+                        {text: '页面样式', link: '/shenghua-web/frontend/style/'},
+                    ],
+                },
+                {
+                    text:'后端',
+                    items: [
+                        {text: '博达系统概述', link: '/shenghua-web/backend/introduce/'},
+                        {text: '博达系统语法', link: '/shenghua-web/backend/language/'},
+                    ],
+                },
+            ],
         },
 
         socialLinks: [
