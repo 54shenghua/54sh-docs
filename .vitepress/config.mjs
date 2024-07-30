@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress'
+import {defineConfig} from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,9 +7,13 @@ export default defineConfig({
     titleTemplate: ':title - 升华工作室文档站',
     description: "中南大学升华工作室的文档网站，包含代码规范，技术教学文档，项目文档等",
     lastUpdated: true,
+    publicDir: 'public',
+    sitemap: {
+        hostname: 'https://docs.54sher.com'
+    },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: 'logo.png',
+        logo: '/logo.png',
         nav: [
             {text: '主页', link: '/', activeMatch: '^/$'},
             {text: '代码规范', link: '/styleguide/', activeMatch: '^/styleguide/'},
