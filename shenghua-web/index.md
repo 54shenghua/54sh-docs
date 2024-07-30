@@ -14,7 +14,9 @@ const Members = [
   {
     avatar: 'https://www.github.com/grtsinry43.png',
     name: 'grtsinry43',
-    title: 'Developer',
+    title: 'Dev',
+    org:'升华工作室',
+    orgLink:'https://github.com/54shenghua',
     links: [
       { icon: 'github', link: 'https://github.com/grtsinry43' }
     ]
@@ -26,7 +28,9 @@ const OldMembers = [
   {
     avatar: 'https://www.github.com/steamfinder.png',
     name: 'SteamFinder',
-    title: 'Developer',
+    title: 'Dev',
+    org:'升华工作室',
+    orgLink:'https://github.com/54shenghua',
     links: [
       { icon: 'github', link: 'https://github.com/steamfinder' }
     ]
@@ -34,7 +38,9 @@ const OldMembers = [
   {
     avatar: 'https://www.github.com/thetheorange.png',
     name: 'thetheOrange',
-    title: 'Developer',
+    title: 'Dev',
+    org:'升华工作室',
+    orgLink:'https://github.com/54shenghua',
     links: [
       { icon: 'github', link: 'https://github.com/thetheorange' }
     ]
