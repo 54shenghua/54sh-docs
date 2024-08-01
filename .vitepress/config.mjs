@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress';
+import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -8,6 +8,7 @@ export default defineConfig({
     description: "中南大学升华工作室的文档网站，包含代码规范，技术教学文档，项目文档等",
     lastUpdated: true,
     publicDir: 'public',
+    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
     sitemap: {
         hostname: 'https://docs.54sher.com'
     },
@@ -15,14 +16,30 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         logo: '/logo.png',
         nav: [
-            {text: '主页', link: '/', activeMatch: '^/$'},
-            {text: '代码规范', link: '/styleguide/', activeMatch: '^/styleguide/'},
-            {text: '问题解决', link: '/solutions/', activeMatch: '^/solutions/'},
-            {text: '快速上手｜Spring Boot', link: '/springboot-quickstart/', activeMatch: '^/springboot-quickstart/'},
-            {text: '快速上手｜Vue.js 3', link: '/vue3-quickstart/', activeMatch: '^/vue3-quickstart/'},
-            {text: '项目｜社团注册', link: '/club-register/', activeMatch: '^/club-register/'},
-            {text: '项目｜实践打卡', link: '/practice-checkin/', activeMatch: '^/practice-checkin/'},
-            {text: '项目｜升华网', link: '/shenghua-web/', activeMatch: '^/shenghua-web/'},
+            // 优化nav层次结构
+            // { text: '主页', link: '/', activeMatch: '^/$' },
+            {
+                text: '开发指南',
+                items: [
+                    { text: '代码规范', link: '/styleguide/', activeMatch: '^/styleguide/' },
+                    { text: '问题解决', link: '/solutions/', activeMatch: '^/solutions/' },
+                ]
+            },
+            {
+                text: '快速上手',
+                items: [
+                    { text: 'Spring Boot', link: '/springboot-quickstart/', activeMatch: '^/springboot-quickstart/' },
+                    { text: 'Vue.js 3', link: '/vue3-quickstart/', activeMatch: '^/vue3-quickstart/' },
+                ]
+            },
+            {
+                text: '现有项目',
+                items: [
+                    { text: '升华网', link: '/shenghua-web/', activeMatch: '^/shenghua-web/' },
+                    { text: '社团注册', link: '/club-register/', activeMatch: '^/club-register/' },
+                    { text: '实践打卡', link: '/practice-checkin/', activeMatch: '^/practice-checkin/' },
+                ]
+            },
         ],
 
         sidebar: {
@@ -30,12 +47,12 @@ export default defineConfig({
                 {
                     text: '代码规范',
                     items: [
-                        {text: '简述', link: '/styleguide/'},
-                        {text: 'PART1-前后端通信', link: '/styleguide/part1'},
-                        {text: 'PART2-前端（Vue.js）', link: '/styleguide/part2'},
-                        {text: 'PART3-后端（FastAPI & Spring Boot）', link: '/styleguide/part3'},
-                        {text: 'PART4-部署与运维', link: '/styleguide/part4'},
-                        {text: 'PART5-其他', link: '/styleguide/part5'}
+                        { text: '简述', link: '/styleguide/' },
+                        { text: 'PART1-前后端通信', link: '/styleguide/part1' },
+                        { text: 'PART2-前端（Vue.js）', link: '/styleguide/part2' },
+                        { text: 'PART3-后端（FastAPI & Spring Boot）', link: '/styleguide/part3' },
+                        { text: 'PART4-部署与运维', link: '/styleguide/part4' },
+                        { text: 'PART5-其他', link: '/styleguide/part5' }
                     ]
                 }
             ],
@@ -43,9 +60,9 @@ export default defineConfig({
                 {
                     text: '问题解决',
                     items: [
-                        {text: '简述', link: '/solutions/'},
-                        {text: 'Vue3项目中使用微信SDK开发微信网页', link: '/solutions/wx-js-sdk-config'},
-                        {text: '使用Less变量和媒体查询实现深浅色模式适配', link: '/solutions/less-media-variable'},
+                        { text: '简述', link: '/solutions/' },
+                        { text: 'Vue3项目中使用微信SDK开发微信网页', link: '/solutions/wx-js-sdk-config' },
+                        { text: '使用Less变量和媒体查询实现深浅色模式适配', link: '/solutions/less-media-variable' },
                     ],
                 }
             ],
@@ -55,39 +72,39 @@ export default defineConfig({
             '/practice-checkin/': [],
             '/shenghua-web/': [
                 {
-                    text:'升华网改版项目',
+                    text: '升华网改版项目',
                     items: [
-                        {text: '项目概述', link: '/shenghua-web/'},
+                        { text: '项目概述', link: '/shenghua-web/' },
                     ],
                 },
                 {
-                    text:'内容维护',
+                    text: '内容维护',
                     items: [
-                        {text: '维护指南', link: '/shenghua-web/content-guide'},
+                        { text: '维护指南', link: '/shenghua-web/content-guide' },
                     ],
                 },
                 {
-                    text:'前端',
+                    text: '前端',
                     items: [
-                        {text: '前端概述', link: '/shenghua-web/frontend/introduce/'},
-                        {text: '页面样式', link: '/shenghua-web/frontend/style/'},
+                        { text: '前端概述', link: '/shenghua-web/frontend/introduce/' },
+                        { text: '页面样式', link: '/shenghua-web/frontend/style/' },
                     ],
                 },
                 {
-                    text:'后端',
+                    text: '后端',
                     items: [
-                        {text: '博达系统概述', link: '/shenghua-web/backend/introduce/'},
-                        {text: '博达系统语法', link: '/shenghua-web/backend/language/'},
+                        { text: '博达系统概述', link: '/shenghua-web/backend/introduce/' },
+                        { text: '博达系统语法', link: '/shenghua-web/backend/language/' },
                     ],
                 },
             ],
         },
 
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/54shenghua/54sh-docs'}
+            { icon: 'github', link: 'https://github.com/54shenghua/54sh-docs' }
         ],
         footer: {
-            message: '部分文档内容遵循 MIT License.',
+            message: '部分文档内容遵循 MIT License, 请参考文档版权声明',
             copyright: 'Copyright © 2024-present 升华工作室'
         },
         search: {
@@ -113,5 +130,20 @@ export default defineConfig({
                 }
             }
         },
+        editLink: {
+            pattern: 'https://github.com/54shenghua/54sh-docs',
+            text: '在GitHub上编辑此条目'
+        },
+        lastUpdated: {
+            text: '最后一次更新',
+            formatOptions: {
+                dateStyle: 'short',
+                timeStyle: 'short'
+            }
+        },
+        docFooter: {
+            prev: '上一篇',
+            next: '下一篇'
+        }
     }
 })
