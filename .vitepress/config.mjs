@@ -8,7 +8,7 @@ export default defineConfig({
     description: "中南大学升华工作室的文档网站，包含代码规范，技术教学文档，项目文档等",
     lastUpdated: true,
     publicDir: 'public',
-    head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+    head: [['link', { rel: 'icon', href: './favicon.ico' }]],
     sitemap: {
         hostname: 'https://docs.54sher.com'
     },
