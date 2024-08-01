@@ -35,7 +35,7 @@ export default defineConfig({
             {
                 text: '现有项目',
                 items: [
-                    { text: '升华网', link: '/shenghua-web/', activeMatch: '^/shenghua-web/' },
+                    { text: '👏升华网', link: '/shenghua-web/', activeMatch: '^/shenghua-web/' },
                     { text: '社团注册', link: '/club-register/', activeMatch: '^/club-register/' },
                     { text: '实践打卡', link: '/practice-checkin/', activeMatch: '^/practice-checkin/' },
                 ]
